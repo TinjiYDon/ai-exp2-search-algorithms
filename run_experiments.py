@@ -384,12 +384,17 @@ def exp_q4() -> None:
     ]
 
     # 5) 距离缓存的收益：预计算 15 对 vs 搜索中每次转移都调用 A*
-    t0 = time.perf_counter()
-    compute_distance_matrix()
-    t_matrix = time.perf_counter() - t0
-    t0 = time.perf_counter()
-    astar_distance(START := POINT_POS["A"], POINT_POS["T1"])
-    t_single = time.perf_counter() - t0
+    #    微秒级计时取多次运行的最小值，降低系统调度噪声
+    def _bench(fn, repeat: int) -> float:
+        best = float("inf")
+        for _ in range(repeat):
+            t0 = time.perf_counter()
+            fn()
+            best = min(best, time.perf_counter() - t0)
+        return best
+
+    t_matrix = _bench(compute_distance_matrix, 30)
+    t_single = _bench(lambda: astar_distance(POINT_POS["A"], POINT_POS["T1"]), 50)
     n_transitions = rows[3][4] - 1  # H=4 Minimax 的边数 = 节点数 - 1
     SUMMARY["q4_caching"] = {
         "matrix_time_ms": round(t_matrix * 1000, 3),

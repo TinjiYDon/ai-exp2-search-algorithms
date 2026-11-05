@@ -508,9 +508,9 @@
     }
   ],
   "q4_caching": {
-    "matrix_time_ms": 0.412,
-    "single_astar_ms": 0.029,
+    "matrix_time_ms": 0.326,
+    "single_astar_ms": 0.022,
     "h4_minimax_transitions": 64,
-    "no_cache_estimate_ms": 1.843
+    "no_cache_estimate_ms": 1.421
   }
 }
