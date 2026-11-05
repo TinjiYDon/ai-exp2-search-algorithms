@@ -1,0 +1,516 @@
+{
+  "q1_given": [
+    {
+      "heuristic": "zero",
+      "expanded": 16,
+      "generated": 18,
+      "max_open": 3,
+      "path_len": 8
+    },
+    {
+      "heuristic": "manhattan",
+      "expanded": 13,
+      "generated": 16,
+      "max_open": 3,
+      "path_len": 8
+    }
+  ],
+  "q1_random20": {
+    "n_maps": 20,
+    "avg_expanded": {
+      "zero": 295.65,
+      "manhattan": 197.75
+    }
+  },
+  "q2_heuristics": [
+    {
+      "heuristic": "zero",
+      "cost": 7,
+      "expanded": 14,
+      "generated": 24
+    },
+    {
+      "heuristic": "manhattan",
+      "cost": 7,
+      "expanded": 10,
+      "generated": 19
+    },
+    {
+      "heuristic": "manhattan_fix",
+      "cost": 7,
+      "expanded": 10,
+      "generated": 19
+    }
+  ],
+  "q2_path": {
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "cost": 7.0,
+    "accumulate": [
+      [
+        [
+          1,
+          0
+        ],
+        1,
+        1,
+        1
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        1,
+        1,
+        2
+      ],
+      [
+        [
+          3,
+          0
+        ],
+        1,
+        1,
+        3
+      ],
+      [
+        [
+          3,
+          1
+        ],
+        1,
+        1,
+        4
+      ],
+      [
+        [
+          3,
+          2
+        ],
+        1,
+        1,
+        5
+      ],
+      [
+        [
+          4,
+          2
+        ],
+        1,
+        1,
+        6
+      ],
+      [
+        [
+          4,
+          3
+        ],
+        1,
+        1,
+        7
+      ],
+      [
+        [
+          4,
+          4
+        ],
+        "E",
+        0,
+        7
+      ]
+    ]
+  },
+  "q2_admissibility_demo": {
+    "grid": [
+      [
+        "S",
+        "E"
+      ]
+    ],
+    "h_manhattan_at_S": 1,
+    "h_fix_at_S": 0,
+    "true_cost": 0
+  },
+  "q3_given_tree": [
+    {
+      "method": "Minimax（无剪枝）",
+      "leaves": 8,
+      "visited": 15,
+      "pruned": 0
+    },
+    {
+      "method": "Alpha-Beta 从左到右",
+      "leaves": 7,
+      "visited": 14,
+      "pruned": 1
+    },
+    {
+      "method": "Alpha-Beta 从右到左",
+      "leaves": 7,
+      "visited": 14,
+      "pruned": 1
+    },
+    {
+      "method": "Alpha-Beta 最优顺序",
+      "leaves": 5,
+      "visited": 11,
+      "pruned": 2
+    }
+  ],
+  "q3_random_scaling": [
+    {
+      "depth": 2,
+      "minimax": 9.0,
+      "alphabeta": 7.166666666666667,
+      "alphabeta_best_order": 5.0
+    },
+    {
+      "depth": 4,
+      "minimax": 81.0,
+      "alphabeta": 41.13333333333333,
+      "alphabeta_best_order": 17.0
+    },
+    {
+      "depth": 6,
+      "minimax": 729.0,
+      "alphabeta": 175.66666666666666,
+      "alphabeta_best_order": 53.0
+    }
+  ],
+  "q4_distance_matrix": {
+    "points": [
+      "A",
+      "B",
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "matrix": {
+      "A": [
+        0,
+        12,
+        10,
+        4,
+        8,
+        8
+      ],
+      "B": [
+        12,
+        0,
+        8,
+        8,
+        4,
+        10
+      ],
+      "T1": [
+        10,
+        8,
+        0,
+        6,
+        6,
+        12
+      ],
+      "T2": [
+        4,
+        8,
+        6,
+        0,
+        6,
+        6
+      ],
+      "T3": [
+        8,
+        4,
+        6,
+        6,
+        0,
+        6
+      ],
+      "T4": [
+        8,
+        10,
+        12,
+        6,
+        6,
+        0
+      ]
+    },
+    "pair_expanded": [
+      [
+        "A",
+        "B",
+        12,
+        23
+      ],
+      [
+        "A",
+        "T1",
+        10,
+        13
+      ],
+      [
+        "A",
+        "T2",
+        4,
+        6
+      ],
+      [
+        "A",
+        "T3",
+        8,
+        13
+      ],
+      [
+        "A",
+        "T4",
+        8,
+        9
+      ],
+      [
+        "B",
+        "T1",
+        8,
+        9
+      ],
+      [
+        "B",
+        "T2",
+        8,
+        14
+      ],
+      [
+        "B",
+        "T3",
+        4,
+        7
+      ],
+      [
+        "B",
+        "T4",
+        10,
+        13
+      ],
+      [
+        "T1",
+        "T2",
+        6,
+        7
+      ],
+      [
+        "T1",
+        "T3",
+        6,
+        8
+      ],
+      [
+        "T1",
+        "T4",
+        12,
+        21
+      ],
+      [
+        "T2",
+        "T3",
+        6,
+        11
+      ],
+      [
+        "T2",
+        "T4",
+        6,
+        7
+      ],
+      [
+        "T3",
+        "T4",
+        6,
+        8
+      ]
+    ],
+    "total_expanded": 169
+  },
+  "q4_pruning": [
+    {
+      "H": 2,
+      "method": "Minimax",
+      "best_target": "T2",
+      "best_value": -1,
+      "nodes": 17,
+      "evals": 12,
+      "pruned": 0
+    },
+    {
+      "H": 2,
+      "method": "Alpha-Beta 自然序",
+      "best_target": "T2",
+      "best_value": -1,
+      "nodes": 13,
+      "evals": 8,
+      "pruned": 4
+    },
+    {
+      "H": 2,
+      "method": "Alpha-Beta 收益排序",
+      "best_target": "T2",
+      "best_value": -1,
+      "nodes": 11,
+      "evals": 6,
+      "pruned": 6
+    },
+    {
+      "H": 4,
+      "method": "Minimax",
+      "best_target": "T3",
+      "best_value": 3,
+      "nodes": 65,
+      "evals": 24,
+      "pruned": 0
+    },
+    {
+      "H": 4,
+      "method": "Alpha-Beta 自然序",
+      "best_target": "T3",
+      "best_value": 3,
+      "nodes": 47,
+      "evals": 16,
+      "pruned": 6
+    },
+    {
+      "H": 4,
+      "method": "Alpha-Beta 收益排序",
+      "best_target": "T3",
+      "best_value": 3,
+      "nodes": 37,
+      "evals": 12,
+      "pruned": 8
+    }
+  ],
+  "q4_depth_sweep": [
+    {
+      "H": 1,
+      "best_target": "T2",
+      "best_value": 2
+    },
+    {
+      "H": 2,
+      "best_target": "T2",
+      "best_value": -1
+    },
+    {
+      "H": 3,
+      "best_target": "T2",
+      "best_value": 2
+    },
+    {
+      "H": 4,
+      "best_target": "T3",
+      "best_value": 3
+    }
+  ],
+  "q4_v3_sweep": [
+    {
+      "V3": 1,
+      "best_target": "T2",
+      "best_value": 7
+    },
+    {
+      "V3": 2,
+      "best_target": "T2",
+      "best_value": 6
+    },
+    {
+      "V3": 3,
+      "best_target": "T2",
+      "best_value": 5
+    },
+    {
+      "V3": 4,
+      "best_target": "T2",
+      "best_value": 4
+    },
+    {
+      "V3": 5,
+      "best_target": "T2",
+      "best_value": 3
+    },
+    {
+      "V3": 6,
+      "best_target": "T2",
+      "best_value": 2
+    },
+    {
+      "V3": 7,
+      "best_target": "T3",
+      "best_value": 3
+    },
+    {
+      "V3": 8,
+      "best_target": "T3",
+      "best_value": 4
+    },
+    {
+      "V3": 9,
+      "best_target": "T3",
+      "best_value": 5
+    },
+    {
+      "V3": 10,
+      "best_target": "T3",
+      "best_value": 6
+    },
+    {
+      "V3": 11,
+      "best_target": "T3",
+      "best_value": 7
+    },
+    {
+      "V3": 12,
+      "best_target": "T3",
+      "best_value": 8
+    }
+  ],
+  "q4_caching": {
+    "matrix_time_ms": 0.412,
+    "single_astar_ms": 0.029,
+    "h4_minimax_transitions": 64,
+    "no_cache_estimate_ms": 1.843
+  }
+}
