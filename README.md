@@ -6,14 +6,14 @@
 
 ## 环境
 
-Python ≥ 3.10，仅实验绘图与报告生成需要第三方库：
+Python ≥ 3.10；算法实现只用标准库（heapq / dataclasses / typing），
+画对照实验的图需要 matplotlib：
 
 ```bash
-pip install matplotlib fpdf2
+pip install matplotlib
 ```
 
-本机验证环境：`D:\ai-stack\venv`（Python 3.12.10，matplotlib 3.11.0，fpdf2）。
-算法实现只用标准库（heapq / dataclasses / typing）。
+本机验证环境：`D:\ai-stack\venv`（Python 3.12.10，matplotlib 3.11.0）。
 
 ## 文件结构
 
@@ -28,15 +28,12 @@ pip install matplotlib fpdf2
 | `run_experiments.py` | 全部对照实验，输出到 `results/` |
 | `results/summary.json` / `tables.md` / `fig_*.png` | 实验数据、表格与图 |
 | `report.md` | 实验报告全文（Markdown） |
-| `build_report_pdf.py` | 生成 `实验报告.pdf` |
-| `实验报告.pdf` | 最终报告 |
 
 ## 一键复现
 
 ```bash
 python run_tests.py        # 回归四个给定用例，全部 PASS
 python run_experiments.py  # 重新生成 results/ 下全部数据与图
-python build_report_pdf.py # 重新生成 实验报告.pdf
 ```
 
 ## 给定用例的验证结果
