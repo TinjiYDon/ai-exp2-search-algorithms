@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+实验报告.pdf
+build_report_pdf.py
